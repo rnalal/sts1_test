@@ -54,11 +54,12 @@ public class BookRepositoryImpl implements BookRepository {
 	public List<Book> getBookListByCategory(String category) {
 		List<Book> booksByCategory = new ArrayList<Book>();
 		
-		for(int i = 0; i  < booksByCategory.size(); i++) {
+		for(int i = 0; i  < listOfBooks.size(); i++) {
 			Book book = listOfBooks.get(i);
 			// 파라미터로 전달받은 category 와 일치하는 분야의 책만 추가함
 			if(category.equalsIgnoreCase(book.getCategory())) {
 				booksByCategory.add(book);
+				System.out.println(book.getCategory());
 			}
 		}
 		

@@ -40,6 +40,7 @@ public class BookController {
 	@GetMapping("/{category}")
 	public String requestBooksByCategory(@PathVariable("category") String category,
 																				Model model) {
+		System.out.println("category : " + category);
 		List<Book> booksByCategory = bookService.getBookListByCategory(category);
 		model.addAttribute("bookList", booksByCategory);
 		return "books";
