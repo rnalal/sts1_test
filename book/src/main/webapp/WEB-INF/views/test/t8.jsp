@@ -10,6 +10,7 @@
   
 </head>
 <body>
-  <h3>bookId : ${bookId}</h3>
+  <h3>bookInfo : ${requestScope.bookInfo}</h3>
+
 </body>
 </html>

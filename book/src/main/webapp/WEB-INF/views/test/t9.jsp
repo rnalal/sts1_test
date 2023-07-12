@@ -10,6 +10,8 @@
   
 </head>
 <body>
-  <h3>bookId : ${bookId}</h3>
+  <h2>${title }</h2>
+  <h4>${subTitle }</h4>
+
 </body>
 </html>
