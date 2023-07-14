@@ -33,12 +33,22 @@
 	<a href="/test/regForm">회원가입하기</a><br>
 	<a href="/books/regBook">도서등록하기</a><br><br>
 	
-	<a href="/test/t9">@ModelAttribute 메소드 수준에서 적용하기</a><br>
+	<a href="/test/t9">@ModelAttribute 메소드 수준에서 적용하기</a><br><br>
 	
-	<a href="/test1">Spring Security Test</a><br>
+	<a href="/test1" >Spring Security Test</a><br><br>
 	
-	<a href="/test/st2">Spring Security Tag Test 1 </a>
-	<a href="/test/st2">Spring Security Tag Test 2 </a>
+	<a href="/test/st2" >Spring Security Tag Test 1</a><br><br>
+	
+	<a href="/test/st3" >Spring Security Tag Test 2</a><br><br>
+	
+	<a href="/books/regBook">관리자 권한으로 접근하기</a><br><br>
+	
+	<a href="/login"> 로 그 인 </a><br><br>
+	
+	    <button onclick="location.href='/test/admin'">/test/admin</button><br><br>
+    <button onclick="location.href='/test/member'">/test/member</button><br><br>
+    <button onclick="location.href='/test/all'">/test/all</button><br><br>
+	
 	</body>
 </html>
 

@@ -105,14 +105,13 @@ public class BookController {
     
     @InitBinder
     public void initBinder(WebDataBinder binder) {
-    	// form page 에서 binding 할려고 하는
-    	// Command 객체(여기서는 Book 객체) 의
+    	// form page 에서 binding 할려고하는
+    	// Command 객체(여기서는 Book 객체)의 
     	// 멤버변수(필드)들을 설정함
     	binder.setAllowedFields("bookId", "name", "unitPrice", "author", 
-    												  "description", "publisher", "category",
-    												  "unitsInStock", "totalPages", "releaseDate",
-    												  "condition");
-    	
+    			                    "description", "publisher", "category",
+    			                    "unitsInStock", "totalPages", "releaseDate",
+    			                    "condition");    	
     }
   
 }

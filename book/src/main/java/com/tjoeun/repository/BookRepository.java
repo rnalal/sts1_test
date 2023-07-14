@@ -1,11 +1,14 @@
 package com.tjoeun.repository;
 
 import java.util.List;
+
 import java.util.Map;
 import java.util.Set;
 
-import com.tjoeun.domain.Book;
+import org.springframework.stereotype.Repository;
 
+import com.tjoeun.domain.Book;
+@Repository
 public interface BookRepository {
 	
 	List<Book> getAllBookList();

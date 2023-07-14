@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class SecurityTestController {
-
+	
 	@GetMapping("/test1")
 	public String requestMethod(Model model) {
 		return "test/st1";
@@ -35,4 +35,27 @@ public class SecurityTestController {
 		model.addAttribute("info", "/test/home.jsp");
 		return "test/home";
 	}
+	
+	
+	// login
+	
+	@GetMapping("/login")
+	public String login(Model model) {
+		return "loginform";
+	}
+	@GetMapping("/admin")
+	public String admin() {
+		return "security01";
+	}
+	@GetMapping("/logout")
+	public String logout(Model model) {
+		return "loginform";
+	}
+	
+	
+
 }
+
+
+
+

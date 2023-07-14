@@ -13,7 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tjoeun.dto.Member;
 
+import lombok.extern.log4j.Log4j;
+
 @Controller
+@Log4j
 @RequestMapping("/test")
 public class TestController {
 	
@@ -154,14 +157,15 @@ public class TestController {
 		model.addAttribute("subTitle", "메소드 수준에서 @ModelAttribute 적용하기");
 	}
 	
+	
 	// <sec:authorize> : 권한 태그 적용하기
 	@GetMapping("/st2")
 	public String requestMethod1() {
 		return "test/st2";
 	}
 	
-	// <sec:authorize> : 권한 태그 적용하기	
-	@GetMapping("/admin/tag")
+  // <sec:authorize> : 권한 태그 적용하기
+	@GetMapping("/manager/tag")
 	public String requestMethod2(Model model) {
 		return "test/st2";
 	}
@@ -172,11 +176,26 @@ public class TestController {
 		return "test/st3";
 	}
 	
-	// <sec:authorize> : 권한 태그 적용하기	
+  // <sec:authorize> : 권한 태그 적용하기
 	@GetMapping("/admin/tag")
 	public String requestMethod4(Model model) {
 		return "test/st3";
 	}
+	
+	@GetMapping("/all")
+	public void doAll() {
+		log.info("do all can access everybody");
+	}
+
+  @GetMapping("/member")
+  public void doMember() {    
+    log.info("logined member");
+  }
+  
+  @GetMapping("/admin")
+  public void doAdmin() {    
+    log.info("admin only");
+  }  
 
 }
 
